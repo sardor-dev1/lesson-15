@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    font-family: Orbitron;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ----------- Header start ------ */
+header {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav__link {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px; 
+    transition: 0.4s;
+}
+
+.nav__link:hover {
+    color: #FAC422;
+}
+
+.nav__right-btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dark {
+    /* background-color: black; */
+    border: none;
+}
+
+.dark-btn {
+    display: none;
+}
+
+.sun-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.fa-sun {
+    font-size: 20px;
+}
+
+.contact-btn {
+    padding: 15px 30px;
+    background: #57B8FF;
+    border-radius: 3px;
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px; 
+    transition: 0.4s;
+}
+
+.contact-btn:hover {
+    color: #FFF;
+    background-color: #FAC422;
+}
+
+.hamburger {
+    border: none;
+    background-color: black;
+    display: none;
+}
+
+.fa-bars {
+    font-size: 20px;
+    color: #fff;
+}
+
+@media (max-width:1000px) {
+    .nav__list {
+        display: none;
+    }
+}
+
+@media (max-width:450px) {
+    .sun-btn {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .contact-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 30px; 
+    transition: 0.4s;
+}
+}
+
+/* ----------- Header End --------- */
+
+
+/* ----------- Hero start --------- */
+#hero {
+    background-color: black;
+    
+}
+
+
+.hero__wrapp {
+    padding-top: 300px;
+    padding-bottom: 250px;
+    position: relative;
+}
+
+.feature-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-text p {
+    color: #57B8FF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px; 
+}
+
+.hero__tittle {
+    width: 100%;
+    max-width: 656px;
+    color: #FFF;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 86px;
+    padding: 24px 0 40px 0;
+}
+
+.hero__text {
+    color: #999;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px; 
+    width: 100%;
+    max-width: 615px;
+    padding-bottom: 53px;
+}
+
+
+.hero__btns {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-btn {
+    padding: 15px 30px;
+    background: #57B8FF;
+    border-radius: 3px;
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px; 
+    transition: 0.4s;
+}
+
+.hero-btn:hover {
+    color: #FFF;
+    background-color: #FAC422;
+}
+
+.hero__link {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px; 
+    text-decoration: solid 1px #fff;
+}
+
+.hero__link:hover {
+    color: #FAC422;
+}
+
+.hero__right-img {
+    position: absolute;
+    top: 330px;
+    right: 0px;
+    width: 550px;
+}
+
+@media (max-width:1160px) {
+    .hero__right-img {
+        width: 400px;
+        top: 500px;
+    }
+}
+
+@media (max-width:1000px) {
+    .hero__right-img {
+        width: 650px;
+        padding-top: 130px;
+        position: static;
+    }
+
+    .hero__tittle {
+        font-size: 62px;
+    }
+}
+
+@media (max-width:700px) {
+    .hero__text {
+        font-size: 14px;
+    }
+
+    .hero__tittle {
+        font-size: 55px;
+    }
+
+    .hero__right-img {
+        width: 500px;
+    }
+}
+
+@media (max-width:550px) {
+    .hero__right-img {
+        display: none;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width:400px) {
+
+    .hero__wrapp {
+        padding-top: 200px;
+        padding-bottom: 50px;
+    }
+    
+    .hero__tittle {
+        font-size: 32px;
+    }
+
+    .sun-btn {
+        display: block;
+    }
+    
+    .contact-btn {
+        display: none;
+    }
+    
+    .hero__btns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-btn {
+        width: 100%;
+    }
+
+    .hero__right-img {
+        display: block;
+        width: 300px;
+        top: 50px;
+    }
+}
+
+/* ---------- Hero end --------- */
+#feature {
+    background-color: black;
+}
+
+.feature__about {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.feature__esport-wrapp {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    
+}
+
+.esport__text {
+    color: #57B8FF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px; 
+}
+
+.feature__tittle {
+    width: 100%;
+    max-width: 715px;
+    color: #FFF;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 74px;
+    margin: 0 auto;
+    padding: 22px 0 40px 0;
+}
+
+.feature__text {
+    width: 100%;
+    max-width: 690px;
+    color: rgba(223, 223, 223, 0.80);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px; 
+    margin: 0 auto;
+}
+
+
+.feature__card-tittle {
+    color: #FFF;
+    text-align: center;
+    font-family: Orbitron;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 74px; /* 115.625% */
+    text-transform: capitalize;
+}
