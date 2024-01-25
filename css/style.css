@@ -1,3 +1,11 @@
+.root {
+    --primary:black;
+    --secondry:white;
+    --hover_color:orange;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +33,7 @@ button {
 
 /* ----------- Header start ------ */
 header {
-    background-color: black;
+    background-color: var(--primary);
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -45,16 +53,20 @@ nav {
     gap: 60px;
 }
 
-.nav__link {
+.nav__item {
     color: #FFF;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px; 
     transition: 0.4s;
+    border-bottom: 1.5px solid transparent;
 }
 
-.nav__link:hover {
-    color: #FAC422;
+
+
+.nav__item:hover {
+    color: var(--hover_color);
+    border-color: var(--hover_color);
 }
 
 .nav__right-btns {
@@ -84,7 +96,7 @@ nav {
 
 .contact-btn {
     padding: 15px 30px;
-    background: #57B8FF;
+    background: black;
     border-radius: 3px;
     border: none;
     color: #FFF;
@@ -139,14 +151,13 @@ nav {
 
 /* ----------- Hero start --------- */
 #hero {
-    background-color: black;
-    
+    background-image: linear-gradient( to right , black 0% 50% , #57B8FF 50% 100%);
 }
 
 
 .hero__wrapp {
     padding-top: 300px;
-    padding-bottom: 250px;
+    padding-bottom: 150px;
     position: relative;
 }
 
@@ -246,6 +257,10 @@ nav {
 }
 
 @media (max-width:700px) {
+    #hero {
+        background-color: black;
+    }
+    
     .hero__text {
         font-size: 14px;
     }
@@ -305,8 +320,81 @@ nav {
 }
 
 /* ---------- Hero end --------- */
+
+/* ---------- Company start ----- */
+#company {
+    background: #FDD04A;
+}
+
+.company__tittle-wr {
+    width: 100%;
+    max-width: 374px;
+    margin: 0 auto;
+    padding-bottom: 27px;
+}
+
+.company__tittle-wr img {
+    padding-left: 80px;
+}
+
+.company__tittle {
+    color: #222730;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 58px; 
+    text-transform: capitalize;
+    padding-top: 128px;
+    padding-bottom: 5px;
+}
+
+.company__text {
+    max-width: 576px;
+    width: 100%;
+    margin: 0 auto;
+    color: #555;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px; 
+}
+
+
+.company__cards {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 44px;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+.company-logo {
+    width: 150px;
+}
+
+
+@media (max-width:1000px) {
+    .company__cards {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        gap: 25px;
+    }
+}
+
+@media (max-width:20%) {
+    .company__cards {
+
+    }
+}
+/* ---------- Company End ------- */
+
+/* ---------- Feature start ----- */
 #feature {
     background-color: black;
+    padding-top: 150px;
 }
 
 .feature__about {
@@ -367,3 +455,101 @@ nav {
     line-height: 74px; /* 115.625% */
     text-transform: capitalize;
 }
+/* -------------- Feature End ------- */
+
+
+#join {
+    background-image: url(../images/Join/IMAGE\ \(2\).svg);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.join__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join__tittle {
+    width: 100%;
+    max-width: 650px;
+    color: #141820;
+    text-align: center;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 82px; 
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+
+.join__text {
+    width: 100%;
+    max-width: 846px;
+    color: #555;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px; 
+    margin: 0 auto;
+}
+
+.email {
+    display: flex;
+    padding: 50px 0 130px 0;
+}
+
+.email input {
+    border: none;
+    padding: 21px 226px 21px 13px;
+    color: #555;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.email button {
+    padding: 21px 8px;
+    border: solid 2px transparent;
+    background-color: #57B8FF;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.email button:hover {
+    color: #FAC422;
+    border-color: #FAC422;
+    background-color: white;
+}
+
+@media (max-width:700px) {
+    .email input {
+        padding-right: 100px;
+    }
+
+    .join__tittle {
+        font-size: 40px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width:580px) {
+    .email {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .email input {
+        margin-bottom: 10px;
+        padding: 15px 100px 15px 8px;
+    }
+    
+    .email button {
+        padding: 15px 8px;
+    }
+}
+
